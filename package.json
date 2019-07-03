@@ -19,7 +19,9 @@
     "release-minor": "aegir release --type minor --no-parallel",
     "release-major": "aegir release --type major --no-parallel",
     "coverage": "aegir coverage --no-parallel --timeout 100000",
-    "coverage-publish": "aegir coverage --provider coveralls --no-parallel --timeout 100000"
+    "coverage-publish": "aegir coverage --provider coveralls --no-parallel --timeout 100000",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "async": "^2.5.0",
@@ -49,7 +51,8 @@
     "readable-stream": "^2.3.3",
     "stream-http": "^2.7.2",
     "streamifier": "^0.1.1",
-    "tar-stream": "^1.5.4"
+    "tar-stream": "^1.5.4",
+    "snyk": "^1.189.0"
   },
   "engines": {
     "node": ">=6.0.0",
@@ -137,5 +140,6 @@
   "bugs": {
     "url": "https://github.com/ipfs/js-ipfs-api/issues"
   },
-  "homepage": "https://github.com/ipfs/js-ipfs-api"
+  "homepage": "https://github.com/ipfs/js-ipfs-api",
+  "snyk": true
 }
